@@ -15,10 +15,6 @@
 
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
-
-# Torch
-PRODUCT_PACKAGES := \
-    Torch
  
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -26,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Common Sony Resources
 $(call inherit-product, device/sony/common/resources.mk)
 
-# Inherit from sirius device
+# Inherit from castor device
 $(call inherit-product, device/sony/castor/castor.mk)
 
 # Set those variables here to overwrite the inherited values.
