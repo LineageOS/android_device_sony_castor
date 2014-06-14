@@ -15,7 +15,7 @@
 # Inherit the fusion-common definitions
 $(call inherit-product, device/sony/shinano-common/shinano.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/sony/sirius/overlay
+DEVICE_PACKAGE_OVERLAYS += device/sony/castor/overlay
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -47,4 +47,4 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 
 # Include non-opensource parts
-$(call inherit-product, vendor/sony/sirius/sirius-vendor.mk)
+$(call inherit-product, vendor/sony/castor/castor-vendor.mk)
