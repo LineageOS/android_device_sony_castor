@@ -16,6 +16,7 @@ etc/sensors_calib.conf
 etc/sysmon.cfg
 lib/libcald_hal.so
 lib/libsysmon_jni.so
+usr/idc/clearpad.idc
 vendor/camera/flash.dat
 vendor/camera/LGI02BN1_CACAO.dat
 vendor/camera/LGI02BN1.dat
