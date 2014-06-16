@@ -16,11 +16,11 @@
 $(call inherit-product, device/sony/shinano-common/shinano.mk)
 
 # Inherit the castor-common definitions
-$(call inherit-product, device/sony/castor/castor-common.mk)
+$(call inherit-product, device/sony/castor_windy/castor-common.mk)
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
-	
+
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/castor/castor-vendor.mk)
