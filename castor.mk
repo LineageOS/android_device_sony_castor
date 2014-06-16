@@ -12,49 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit the fusion-common definitions
+# Inherit the shinano-common definitions
 $(call inherit-product, device/sony/shinano-common/shinano.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/sony/castor/overlay
+# Inherit the castor-common definitions
+$(call inherit-product, device/sony/castor/castor-common.mk)
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
-    frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
-	frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-	frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
-    frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-	frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-	frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
-
-# This device is xhdpi.  However the platform doesn't
-# currently contain all of the bitmaps at xhdpi density so
-# we do this little trick to fall back to the hdpi version
-# if the xhdpi doesn't exist.
-PRODUCT_AAPT_CONFIG := xlarge hdpi xhdpi xxhdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
-
-#Device is a Tablet
-PRODUCT_CHARACTERISTICS := tablet
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
-
-# Device specific init
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.device.rc:root/init.device.rc
-
-# USB function switching
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.sony.usb.rc:root/init.sony.usb.rc
-
-# Device specific part for two-stage boot
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/bootrec-device:recovery/bootrec-device
-
-# call dalvik heap config
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
-
+	
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/castor/castor-vendor.mk)
