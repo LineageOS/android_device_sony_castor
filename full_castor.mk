@@ -25,4 +25,6 @@ $(call inherit-product, device/sony/castor/castor.mk)
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_castor
 PRODUCT_DEVICE := castor
+PRODUCT_BRAND := Sony
+PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := Xperia Z2 Tablet LTE
