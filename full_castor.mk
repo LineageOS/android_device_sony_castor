@@ -1,5 +1,5 @@
 # Copyright (C) 2011 The Android Open Source Project
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,11 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
-
-# Common Sony Resources
-$(call inherit-product, device/sony/common/resources.mk)
+# Common castor Resources
+$(call inherit-product, device/sony/castor_windy/full_castor-common.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -28,6 +25,4 @@ $(call inherit-product, device/sony/castor/castor.mk)
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_castor
 PRODUCT_DEVICE := castor
-PRODUCT_BRAND := Sony
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia Z2 Tablet
+PRODUCT_MODEL := Xperia Z2 Tablet LTE

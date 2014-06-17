@@ -1,4 +1,4 @@
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,25 +13,10 @@
 # limitations under the License.
 
 # inherit from the common shinano definitions
-include device/sony/shinano-common/BoardConfigCommon.mk
-
-# inherit from the proprietary version
-#-include vendor/sony/castor/BoardConfigVendor.mk
+include device/sony/castor_windy/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := SGP511,SGP512,SGP521,castor
-
-TARGET_SPECIFIC_HEADER_PATH += device/sony/castor_windy/include
-
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/castor_windy/bluetooth
+TARGET_OTA_ASSERT_DEVICE := SGP521,SGP541,SGP551,castor
 
 # Kernel properties
 TARGET_KERNEL_CONFIG := cm_shinano_castor_defconfig
-
-# Partition information
-BOARD_VOLD_MAX_PARTITIONS := 26
-
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01400000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01400000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1056964608
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
