@@ -16,6 +16,9 @@
 # Common castor Resources
 $(call inherit-product, device/sony/castor_windy/full_castor-common.mk)
 
+DEVICE_PACKAGE_OVERLAYS += \
+     device/sony/castor/overlay
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
