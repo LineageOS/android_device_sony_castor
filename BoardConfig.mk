@@ -15,6 +15,8 @@
 # inherit from the common shinano definitions
 include device/sony/castor_windy/BoardConfigCommon.mk
 
+TARGET_SPECIFIC_HEADER_PATH += device/sony/castor/include
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := SGP521,SGP541,SGP551,castor
 
