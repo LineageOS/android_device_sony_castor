@@ -19,6 +19,3 @@ TARGET_SPECIFIC_HEADER_PATH += device/sony/castor/include
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := SGP521,SGP541,SGP551,castor
-
-# Kernel properties
-TARGET_KERNEL_CONFIG := cm_shinano_castor_defconfig
