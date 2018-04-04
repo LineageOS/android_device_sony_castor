@@ -16,3 +16,8 @@
 
 PRODUCT_MAKEFILES := \
 	 $(LOCAL_DIR)/lineage_castor.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_castor-user \
+    lineage_castor-userdebug \
+    lineage_castor-eng
