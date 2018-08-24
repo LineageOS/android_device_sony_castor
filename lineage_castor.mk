@@ -1,5 +1,5 @@
-# Copyright (C) 2011 The Android Open Source Project
-# Copyright (C) 2014 The CyanogenMod Project
+#
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,6 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
 # Common castor Resources
 $(call inherit-product, device/sony/castor_windy/full_castor-common.mk)
@@ -25,9 +26,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from castor device
 $(call inherit-product, device/sony/castor/castor.mk)
 
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_castor
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+PRODUCT_NAME := lineage_castor
 PRODUCT_DEVICE := castor
 PRODUCT_BRAND := Sony
-PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := Xperia Z2 Tablet LTE
+PRODUCT_MANUFACTURER := Sony
+
+PRODUCT_GMS_CLIENTID_BASE := android-sony
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="SGP521-user 5.1.1 23.4.A.0.546 3701983898 release-keys"
+
+BUILD_FINGERPRINT := Sony/SGP521/SGP521:5.1.1/23.4.A.0.546/3701983898:user/release-keys
