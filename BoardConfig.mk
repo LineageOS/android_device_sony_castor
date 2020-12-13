@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from the common shinano definitions
+# inherit from the common castor definitions
 include device/sony/castor_windy/BoardConfigCommon.mk
 
 # Assert
