@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-# Common castor Resources
-$(call inherit-product, device/sony/castor_windy/full_castor-common.mk)
-
 DEVICE_PACKAGE_OVERLAYS += \
      device/sony/castor/overlay
 
