@@ -24,5 +24,9 @@ PRODUCT_COPY_FILES += \
 # Properties
 include $(LOCAL_PATH)/system_prop.mk
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/castor/castor-vendor.mk)
