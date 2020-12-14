@@ -17,3 +17,7 @@ include device/sony/castor_windy/BoardConfigCommon.mk
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := SGP521,SGP541,SGP551,castor
+
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    device/sony/castor
