@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-	 $(LOCAL_DIR)/lineage_castor.mk
+    $(LOCAL_DIR)/lineage_castor.mk
 
 COMMON_LUNCH_CHOICES := \
     lineage_castor-user \
