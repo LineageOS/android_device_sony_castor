@@ -17,3 +17,6 @@ include device/sony/castor_windy/BoardConfigCommon.mk
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := SGP521,SGP541,SGP551,castor
+
+# Kernel properties
+TARGET_KERNEL_CONFIG := lineageos_shinano_castor_defconfig
