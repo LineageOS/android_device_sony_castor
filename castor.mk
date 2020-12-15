@@ -32,5 +32,9 @@ include $(LOCAL_PATH)/system_prop.mk
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+
+# Pull in blobs from Wifi version
+$(call inherit-product, vendor/sony/castor_windy/castor_windy-vendor.mk)
+
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/castor/castor-vendor.mk)
