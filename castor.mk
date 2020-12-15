@@ -21,6 +21,10 @@ $(call inherit-product, device/sony/castor_windy/castor-common.mk)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 # Properties
 include $(LOCAL_PATH)/system_prop.mk
 
