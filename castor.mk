@@ -34,3 +34,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/castor/castor-vendor.mk)
+
+# Blobs from Wifi version are needed as well
+$(call inherit-product, vendor/sony/castor_windy/castor_windy-vendor.mk)
